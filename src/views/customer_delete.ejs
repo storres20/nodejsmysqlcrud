@@ -1,0 +1,48 @@
+<%- include ('partials/_header'); -%>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/delete/<%= data.id %>" method="post">
+                        <h2>¿Desea eliminar este dato?</h2>
+                        <div class="form-group">
+                            <h6 class="text-info">Codigo Patrimonial</h6>
+                            <input type="text" name="cp" value="<%=data.cp%>" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <h6 class="text-info">Equipo</h6>
+                            <input type="text" name="equipo" value="<%=data.equipo%>" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <h6 class="text-info">Marca</h6>
+                            <input type="text" name="marca" value="<%=data.marca%>" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <h6 class="text-info">Modelo</h6>
+                            <input type="text" name="modelo" value="<%=data.modelo%>" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <h6 class="text-info">Serie</h6>
+                            <input type="text" name="serie" value="<%=data.serie%>" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <h6 class="text-info">Ubicacion</h6>
+                            <input type="text" name="ubicacion" value="<%=data.ubicacion%>" class="form-control" readonly>
+                        </div>
+                        <!--el "boton" activa el "evento" del formulario para que envie los datos de los "input text" hacia el servidor-->
+                        <button type="submit" class="btn btn-info">CONFIRM DELETE</button>
+                        <button class="btn btn-danger" onclick="history.back()">CANCEL</button>
+
+                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include ('partials/_footer'); -%>

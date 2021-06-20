@@ -1,0 +1,74 @@
+ <%- include ('partials/_header'); -%>
+
+ <!--<pre> <%# data[0].address %>  </pre> -->
+ 
+ <div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <table class="table table-bordered table-hover">
+                <a href="/add" class="btn btn-info">NEW DATA <i class="bi bi-clipboard-plus"></i></a>
+                <thead>
+                    <tr class="table-info">
+                        <th>nº</th>
+                        <th>Codigo Patrimonial</th>
+                        <th>Equipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Serie</th>
+                        <th>Ubicacion</th>
+                        <th class="text-center"><i class="bi bi-pencil" style="font-size: 1.5rem;"></i></th>
+                        <th class="text-center"><i class="bi bi-trash" style="font-size: 1.5rem;"></i></th>
+                    </tr>
+                </thead>
+
+                <% let cont = 1; %>
+                <% let otro = 0; %>
+                <h3 id="prueba"></h3>
+
+                <tbody>
+
+                    <% if (data) { %>
+                        
+                        <% for (let i=0; i<data.length; i++) { %>
+                            <tr>
+                                <td><%=(i+1)%></td>
+                                <td><%=data[i].cp%></td>
+                                <td><%=data[i].equipo%></td>
+                                <td><%=data[i].marca%></td>
+                                <td><%=data[i].modelo%></td>
+                                <td><%=data[i].serie%></td>
+                                <td><%=data[i].ubicacion%></td>
+                                <td><a href="/update/<%= data[i].id %>" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
+                                </td>
+                                <td><a href="/delete/<%= data[i].id %>" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
+                            </tr>
+                        <% } %>
+
+                    <% } %>
+
+                </tbody>
+
+                <tfoot>
+                    <tr class="table-info">
+                        <th>nº</th>
+                        <th>Codigo Patrimonial</th>
+                        <th>Equipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Serie</th>
+                        <th>Ubicacion</th>
+                        <th class="text-center"><i class="bi bi-pencil" style="font-size: 1.5rem;"></i></th>
+                        <th class="text-center"><i class="bi bi-trash" style="font-size: 1.5rem;"></i></th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </div>
+    </div>
+ </div>
+
+
+
+ <%- include ('partials/_footer'); -%>
+
+

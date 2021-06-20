@@ -1,0 +1,52 @@
+12 jun 2021 - 10:56pm
+---------------------
+
+* se ha trabajado la carpeta "nodejsmysqlcrud"
+* se esta basando en un tutorial de youtube
+
+Nodejs y Mysql CRUD | Aplicación Web con Node.js y Mysql
+https://www.youtube.com/watch?v=VxRXlUrV6y0&t=1558s
+Fazt code
+
+* en resumen: se tiene un formulario para llenar datos y estos se envian a la base de datos por medio de un boton
+* incluye una tabla dinamica
+* la tabla tiene 02 botones (edit y delete)
+
+* NOTA:
+
+min 44:51 se utiliza 'partials' y el codigo de 'customers.ejs' se modifica a:
+
+<% include partials/_header %>
+<h1>CUSTOMERS</h1>
+<% include partials/_footer %>
+
+sin embargo al recargar la web, se menciona que hay error de sintaxis con ejs
+
+se procedio a hacer la consulta a 'stackoverflow'
+
+https://stackoverflow.com/questions/59106739/syntaxerror-unexpected-indentifier-while-compiling-ejs-problem
+
+el codigo corregido es este:
+
+ <%- include ('partials/_header'); -%>
+ <h1>CUSTOMERS</h1>
+ <%- include ('partials/_footer'); -%>
+
+* el codigo inicial de EJS esta bien, pero es del 2018, el ultimo RELEASE de EJS no lo soporte. Por eso se hace las correcciones para el 2021
+
+resumen de tecnologias
+----------------------
+* node js
+* mysql
+* ejs
+
+16 jun 2021 - 10:56pm
+---------------------
+
+* se ha terminado de implementar todo el tutorial en VScode
+* la tabla dinamica esta bien
+* se aprendio a usar los metodos get, post, delete
+* el tema de EJS es nuevo y aun falta practica
+* esta pendiente el INPUT TEXT para busqueda selectiva dentro del inventario
+
+
